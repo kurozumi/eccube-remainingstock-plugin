@@ -1,0 +1,5 @@
+name: 残り在庫数表示プラグイン
+code: RemainingStock
+version: 1.0.0
+service:
+    - RemainingStockServiceProvider
