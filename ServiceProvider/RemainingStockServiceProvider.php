@@ -37,7 +37,7 @@ class RemainingStockServiceProvider implements ServiceProviderInterface
 
         // Service
         $app['eccube.service.cart'] = $app->share($app->extend('eccube.service.cart', function() use ($app) {
-            return new Plugin\RemainingStock\Service\CartService($app);
+            return new \Plugin\RemainingStock\Service\CartService($app);
         }));
 
         // メッセージ登録
