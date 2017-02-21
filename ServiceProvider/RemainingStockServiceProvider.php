@@ -21,17 +21,17 @@ class RemainingStockServiceProvider implements ServiceProviderInterface
     public function register(BaseApplication $app)
     {
         // プラグイン用設定画面
-        $app->match('/'.$app['config']['admin_route'].'/plugin/RemainingStock/config', 'Plugin\RemainingStock\Controller\ConfigController::index')->bind('plugin_RemainingStock_config');
+        //$app->match('/'.$app['config']['admin_route'].'/plugin/RemainingStock/config', 'Plugin\RemainingStock\Controller\ConfigController::index')->bind('plugin_RemainingStock_config');
 
         // 独自コントローラ
-        $app->match('/plugin/remainingstock/hello', 'Plugin\RemainingStock\Controller\RemainingStockController::index')->bind('plugin_RemainingStock_hello');
+        //$app->match('/plugin/remainingstock/hello', 'Plugin\RemainingStock\Controller\RemainingStockController::index')->bind('plugin_RemainingStock_hello');
 
         // Form
-        $app['form.types'] = $app->share($app->extend('form.types', function ($types) use ($app) {
-            $types[] = new RemainingStockConfigType();
-
-            return $types;
-        }));
+        //$app['form.types'] = $app->share($app->extend('form.types', function ($types) use ($app) {
+        //    $types[] = new RemainingStockConfigType();
+        //
+        //    return $types;
+        //}));
 
         // Repository
 
